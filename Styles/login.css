@@ -1,0 +1,74 @@
+.inCenter {
+	width: 200px;
+	height: 200px;
+	opacity: 0.6;
+	border-radius: 6px;
+	margin-left: 36.5%;
+	margin-top: 5px;
+	display: inline-block;
+	position: absolute;
+}
+
+p.serif {
+	margin-top: 140px;
+	margin-left: 44%;
+	font-size: 40px;
+	color: white;
+	font-family: "Times New Roman", Times, serif;
+	text-decoration: underline 2px;
+}
+
+input[type="text"] , input[type="password"]{
+	margin: 10px;
+	text-align: center;
+	height: 30px;
+	width: 300px;
+	opacity: 1;
+	border-radius: 8px;
+	outline: none;
+}
+
+.navbar {
+	margin-left: -10px; margin-top: -10px; margin-right: -8px
+}
+
+input[type="submit"]{
+	background-color: #34B334;
+	height: 25px;
+	width: 100px;
+	margin-top: 10px;
+	border-radius: 10px;
+	border-style: hidden;
+	position: relative;
+	margin-left: 55%;
+	opacity: 0.8;
+}
+
+body{
+	background-image: url('diary2.jpg');
+	background-repeat: no-repeat;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1D1A0C;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #46311C;
+}

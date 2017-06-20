@@ -1,0 +1,65 @@
+body {
+	background-image: url('study.jpg');
+}
+
+.container {
+	max-width: 600px;
+	height: 300px;
+	position: relative;
+	margin-left: 350px;
+	margin-top: 100px;
+	display: table-row-group;
+	float: left;
+}
+
+.class-1 {
+	position: relative;
+	padding: 10px;
+	margin-left: 5px;
+	margin-top: 20px;
+	float: left;
+}
+
+a[class="up"]:link, a[class="up"]:visited, a[class="low"]:link, a[class="low"]:visited   {
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	opacity: 1;
+	padding-left: 10px;
+	padding-top: 10px;
+	display: inline-block;
+	position: relative;
+
+	border: 0.5px solid white;
+}
+ 
+a[class="up"]:hover, a[class="up"]:active {
+    opacity: 0.7;
+    text-align: center;
+    padding: 125px;
+    margin-bottom: 125px;
+    padding-right: 125px;
+    margin-left: -75px;
+    margin-top: -75px;
+    position: absolute;
+    z-index: 10;
+
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+a[class="low"]:hover, a[class="low"]:active {
+	opacity: 0.7;
+    text-align: center;
+    padding-left: 125px;
+    padding-right: 40px;
+    margin-bottom: 125px;
+    margin-left: -75px;
+    margin-top: -75px;
+    z-index: 10;
+    height: 125px;
+    position: absolute;
+
+    border: 2px solid white;
+    border-radius: 20px;
+}

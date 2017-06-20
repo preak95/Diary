@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This is awesome</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<style type="text/css">
+	#txtarea{
+		height: 400px;
+		width: 100%;
+		background-color:rgba(0,0,0,0) !important;
+		color: white;
+		border-width: 2px;
+	}
+
+	body {
+    	background-image: url("ing3.jpg");
+	}
+
+	.red .active a,
+	.red .active a:hover {
+    	background-color: red;
+	}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+
+		<form id="lout" method="POST" action="/logout">
+			<input type="hidden" name="name">
+		</form>
+
+		<form id="viewall" method="POST" action="/viewall">
+			<input type="hidden" name="name">
+		</form>
+
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">JUSTWRITE</a>
+			</div>
+
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a>New</a></li>
+					<li><a onclick="document.getElementById('viewall').submit()">Search</a></li>
+					<li><a>Category</a></li>
+					<li><a>Help</a></li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Account <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li class="active"><a onclick="document.getElementById('viewall').submit()">New</a></li>
+							<li><a>Old</a></li>
+					 		<li><a>Awesome</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" onclick="document.getElementById('lout').submit()">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+<div class="container fluid">
+	<div class="row">
+		<div class="col-sm-2">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Old Stories</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td>2<sup>nd</sup>Jan 2017</td></tr>
+					<tr><td>3<sup>rd</sup>Jan 2017</td></tr>
+					<tr><td>4<sup>th</sup>Jan 2017</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-sm-7">
+			<form id="txt_form" method="post", action="/save">
+				<textarea name="diary_entry" id="txtarea"></textarea> 
+			</form>
+		</div>
+		<div class="col-sm-3">
+			<ul class="nav nav-pills nav-stacked">
+  				<li class="active"><a href="#">Home</a></li>
+  				<li><a href="#"><span class="glyphicon glyphicon-search"></span>   Search </a></li>
+  				<li><a href="#"><span class="glyphicon glyphicon-tags"></span>   Tags </a></li>
+  				<li><a href="#"><span class="glyphicon glyphicon-book"></span>   Topics </a></li>
+			</ul>
+		</div>
+
+		<div class="col-sm-5">
+			
+		</div>
+		<div class="col-sm-2">
+			<button class="btn btn-success" onclick="document.getElementById('txt_form').submit()">Save</button>
+		</div>
+		<div class="col-sm-5">
+			
+		</div>
+	</div>
+</div>
+</body>
+</html>

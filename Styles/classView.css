@@ -1,0 +1,60 @@
+.classTable{
+	opacity: 0.65;
+	width: 300px;
+	background-color: ;
+	padding: 20px;
+	position: absolute;
+	border-radius: 6px;
+	margin-left: 30%;
+	margin-top: 50px;
+	color: white;
+}
+
+table {
+	border-collapse: collapse;
+	width: 500px;
+}
+
+th {
+	background-color: #1D1A0C;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td {
+	padding: 5px; 
+}
+
+tr[class="inner"] {
+	background-color: #DEB887;
+	color: black;
+	text-align: center;
+}
+
+tr:hover {background-color: #46311C}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1D1A0C;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #2E5894;
+}

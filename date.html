@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var dat = new Date();
+		var day = dat.getDate();
+		var month = dat.getMonth();
+		var year = dat.getFullYear();
+		var fullDate = Date(day,month,year);
+
+		console.log(fullDate);
+		function fss(){
+			document.getElementById('date').innerHTML = month;
+		}
+
+	</script>
+	<title></title>
+</head>
+<body onload="fss()">
+<p id="date"></p>
+</body>
+</html>

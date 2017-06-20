@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Message</title>
+	<style type="text/css">
+		body {
+			background-image: url('diary2.jpg');
+			background-repeat: no-repeat;
+		}
+
+		.inCenter {
+			width: 200px;
+			height: 200px;
+			opacity: 0.6;
+			border-radius: 6px;
+			margin-left: 36.5%;
+			margin-top: 5px;
+			display: inline-block;
+			position: absolute;
+		}
+
+		input[type = submit]{
+			width: 100px;
+			margin-left: 25px;
+			margin-right: 5px;
+			border-radius: 6px;
+		}
+
+		.ins {
+			width: 200px;
+			margin-top: 20px;
+			height: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div class="inCenter">
+	<p>
+		<%= message %>
+	</p>
+	<form action="/">
+		<input type="submit" name="btn" value="Home">
+	</form>
+</div>
+</body>
+</html>

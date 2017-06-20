@@ -1,0 +1,65 @@
+label{
+	color: white;
+	margin-right: 8px;
+	width: 40px;
+	padding-right: 5px;
+	position: relative;
+}
+
+input {
+    border: 0.5px solid;
+    border-radius: 4px;
+    width: 200px;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 3px 6px;
+    text-decoration: none;
+    margin: 0px 120px;
+    cursor: pointer;
+    width: 60px;
+}
+
+select {
+	margin-left: 20px;
+	border: 0.5px solid;
+    border-radius: 4px;
+	width: 200px;
+}
+
+#signup{
+	opacity: 0.5;
+	width: 300px;
+	padding: 20px;
+	position: absolute;
+	margin-left: 35%;
+	margin-top: 50px;
+	color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1D1A0C;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #46311C;
+}
