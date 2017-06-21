@@ -89,7 +89,7 @@ app.get('/login', function(req, res){
 	}
 	else{
 		res.writeHead(200, {'content-Type' : 'text/html'});
-		var readStream = fs.createReadStream('loginpage.html', 'utf8');
+		var readStream = fs.createReadStream(__dirname + '/loginpage.html', 'utf8');
 		readStream.pipe(res);
 	}	
 });
