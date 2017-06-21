@@ -42,26 +42,26 @@
 			<input type="hidden" name="name">
 		</form>
 
+		<form id="new" method="GET" action="/login">
+			<input type="hidden" name="name">
+		</form>
+
 		<div class="container-fluid">
 			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+		    	</button>
 				<a href="#" class="navbar-brand">JUSTWRITE</a>
 			</div>
 
-			<div>
+			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a>New</a></li>
-					<li><a onclick="document.getElementById('viewall').submit()">Search</a></li>
+					<li class="active"><a onclick="document.getElementById('new').submit()">New</a></li>
+					<li><a onclick="document.getElementById('viewall').submit()">View all</a></li>
 					<li><a>Category</a></li>
 					<li><a>Help</a></li>
-
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Account <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li class="active"><a onclick="document.getElementById('viewall').submit()">New</a></li>
-							<li><a>Old</a></li>
-					 		<li><a>Awesome</a></li>
-						</ul>
-					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#" onclick="document.getElementById('lout').submit()">Logout</a></li>
@@ -72,7 +72,7 @@
 
 <div class="container fluid">
 	<div class="row">
-		<div class="col-sm-2">
+		<div class="col-sm-3"><!--
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -84,27 +84,26 @@
 					<tr><td>3<sup>rd</sup>Jan 2017</td></tr>
 					<tr><td>4<sup>th</sup>Jan 2017</td></tr>
 				</tbody>
-			</table>
+			</table>-->
 		</div>
-		<div class="col-sm-7">
+		<div class="col-sm-6">
 			<form id="txt_form" method="post", action="/save">
 				<textarea name="diary_entry" id="txtarea"></textarea> 
 			</form>
+			
+			<button style="margin-left: 45%" class="btn btn-success" onclick="document.getElementById('txt_form').submit()">Save</button>
 		</div>
-		<div class="col-sm-3">
+		<div class="col-sm-3"> <!--
 			<ul class="nav nav-pills nav-stacked">
   				<li class="active"><a href="#">Home</a></li>
   				<li><a href="#"><span class="glyphicon glyphicon-search"></span>   Search </a></li>
   				<li><a href="#"><span class="glyphicon glyphicon-tags"></span>   Tags </a></li>
   				<li><a href="#"><span class="glyphicon glyphicon-book"></span>   Topics </a></li>
-			</ul>
+			</ul> -->
 		</div>
 
 		<div class="col-sm-5">
 			
-		</div>
-		<div class="col-sm-2">
-			<button class="btn btn-success" onclick="document.getElementById('txt_form').submit()">Save</button>
 		</div>
 		<div class="col-sm-5">
 			

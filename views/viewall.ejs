@@ -41,34 +41,35 @@
 <body>
 
 <nav class="navbar navbar-inverse">
-		<form id="home" method="get" action="/login">         
-			<input type="hidden" name="name">
-		</form>
 
 		<form id="lout" method="POST" action="/logout">
 			<input type="hidden" name="name">
 		</form>
 
+		<form id="viewall" method="POST" action="/viewall">
+			<input type="hidden" name="name">
+		</form>
+
+		<form id="new" method="get" action="/login">
+			<input type="hidden" name="name">
+		</form>
+
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="#" class="navbar-brand" onclick="document.getElementById('home').submit()">JUSTWRITE</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+		    	</button>
+				<a href="#" class="navbar-brand">JUSTWRITE</a>
 			</div>
 
-			<div>
+			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a onclick="document.getElementById('home').submit()">New</a></li>
-					<li><a onclick="document.getElementById('viewall').submit()">Search</a></li>
+					<li><a onclick="document.getElementById('new').submit()">New</a></li>
+					<li class="active"><a onclick="document.getElementById('viewall').submit()">View all</a></li>
 					<li><a>Category</a></li>
 					<li><a>Help</a></li>
-
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Account <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li class="active"><a>New</a></li>
-							<li><a>Old</a></li>
-					 		<li><a>Awesome</a></li>
-						</ul>
-					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#" onclick="document.getElementById('lout').submit()">Logout</a></li>
