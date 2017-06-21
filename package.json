@@ -31,5 +31,9 @@
     "express-session": "^1.15.3",
     "http": "0.0.0",
     "mongoose": "^4.10.6"
-  }
+  },
+  "engines": {
+        "node": "7.7.3",
+        "npm": "4.1.2"
+    } 
 }
