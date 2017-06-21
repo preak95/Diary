@@ -42,7 +42,6 @@ var user_doc = mongoose.model('users', users);
 var diary_doc = mongoose.model('diaries', diaries);
 
 app.use(express.static(__dirname + '/Styles'));
-app.use(express.static(__dirname + '/Pages'));
 app.use('/register', express.static(__dirname + '/Styles'));
 app.use('/', express.static(__dirname + '/images'));
 app.use('/register', express.static(__dirname + '/images'));
@@ -89,7 +88,7 @@ app.get('/login', function(req, res){
 	}
 	else{
 		res.writeHead(200, {'content-Type' : 'text/html'});
-		var readStream = fs.createReadStream('/loginpage.html', 'utf8');
+		var readStream = fs.createReadStream(__dirname + '/Pages/loginpage.html', 'utf8');
 		readStream.pipe(res);
 	}	
 });
