@@ -83,7 +83,7 @@ app.get('/login', function(req, res){
 	if(req.session.user){
 		console.log("Already logged in");
 		res.writeHead(200,{'content-Type' : 'text/html'});
-		var readStream = fs.createReadStream(__dirname +'/pages/bootdiary.html', 'utf8');
+		var readStream = fs.createReadStream('pages/bootdiary.html', 'utf8');
 		readStream.pipe(res);
 	}
 	else{
