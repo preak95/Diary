@@ -80,6 +80,7 @@
 <div class="container fluid">
 	<div class="row">
 		<div class="col-sm-2">
+		<!--
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -92,12 +93,14 @@
 					<tr><td>4<sup>th</sup>Jan 2017</td></tr>
 				</tbody>
 			</table>
+		-->
 		</div>
 		
-		<% for(var i=0; i<dia.length; i++){%>
-   			<div class="col-sm-7 entry"><p><%= dia[i].diary_entry %></p></div><% } %>
-		
-		<div class="col-sm-3">
+		<div class="col-sm-8">
+			<% for(var i=0; i<dia.length; i++){%>
+   			<div class="entry"><p><%= dia[i].diary_entry %></p></div><% } %>
+		</div>
+		<div class="col-sm-2">
 			
 		</div>
 	</div>
