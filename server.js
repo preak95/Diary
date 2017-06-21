@@ -51,7 +51,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false});
 app.get('/',function(req, res) {
 	console.log('Delivering Homepage'+ req.url);
 	res.writeHead(200,{'content-Type' : 'text/html'});
-	var readStream = fs.createReadStream(__dirname + '/pages/homepage.html', 'utf8');
+	var readStream = fs.createReadStream(__dirname + '/index.html', 'utf8');
 	readStream.pipe(res);
 });
 
@@ -68,7 +68,7 @@ app.post('/register', function(req, res){
 			var newClass = user_doc(req.body).save(function(err){
 				if(err) throw err;
 				res.writeHead(200,{'content-Type' : 'text/html'});
-				var readStream = fs.createReadStream(__dirname +'pages/homepage.html', 'utf8');
+				var readStream = fs.createReadStream(__dirname +'/index.html', 'utf8');
 				readStream.pipe(res);
 			});	
 		}
@@ -120,7 +120,7 @@ app.post('/login', function(req, res){
 app.post('/logout',function(req, res){
 	req.session.destroy();
 	res.writeHead(200, {'content-Type' : 'text/html'});
-	var readStream = fs.createReadStream(__dirname +'pages/homepage.html', 'utf8');
+	var readStream = fs.createReadStream(__dirname +'/index.html', 'utf8');
 	readStream.pipe(res);
 });
 
