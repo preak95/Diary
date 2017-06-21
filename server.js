@@ -57,7 +57,7 @@ app.get('/',function(req, res) {
 
 app.get('/register', function(req, res){
 	res.writeHead(200,{'content-Type' : 'text/html'});
-	var readStream = fs.createReadStream(__dirname +'pages/userregister.html', 'utf8');
+	var readStream = fs.createReadStream(__dirname +'/pages/userregister.html', 'utf8');
 	readStream.pipe(res);
 });
 
@@ -83,12 +83,12 @@ app.get('/login', function(req, res){
 	if(req.session.user){
 		console.log("Already logged in");
 		res.writeHead(200,{'content-Type' : 'text/html'});
-		var readStream = fs.createReadStream(__dirname +'pages/bootdiary.html', 'utf8');
+		var readStream = fs.createReadStream(__dirname +'/pages/bootdiary.html', 'utf8');
 		readStream.pipe(res);
 	}
 	else{
 		res.writeHead(200, {'content-Type' : 'text/html'});
-		var readStream = fs.createReadStream(__dirname +'pages/loginpage.html', 'utf8');
+		var readStream = fs.createReadStream(__dirname +'/pages/loginpage.html', 'utf8');
 		readStream.pipe(res);
 	}	
 });
@@ -104,7 +104,7 @@ app.post('/login', function(req, res){
 				//	console.log(data);
 				req.session.user = req.body;
 				res.writeHead(200,{'content-Type' : 'text/html'});
-				var readStream = fs.createReadStream(__dirname +'pages/bootdiary.html', 'utf8');
+				var readStream = fs.createReadStream(__dirname +'/pages/bootdiary.html', 'utf8');
 				readStream.pipe(res);
 			}
 			else
@@ -147,14 +147,14 @@ app.post('/save', function(req, res){
 
 			user_doc.update({ 'user_name' : user }, { $push : { diaries : {fullDate : uniqueDiaryName}}}, function(err, data){
 				res.writeHead(200,{'content-Type' : 'text/html'});
-				var readStream = fs.createReadStream(__dirname +'pages/bootdiary.html', 'utf8');
+				var readStream = fs.createReadStream(__dirname +'/pages/bootdiary.html', 'utf8');
 				readStream.pipe(res);
 		});
 	});	
 	}
 	else{
 		res.writeHead(200, {'content-Type' : 'text/html'});
-		var readStream = fs.createReadStream(__dirname +'pages/loginpage.html', 'utf8');
+		var readStream = fs.createReadStream(__dirname +'/pages/loginpage.html', 'utf8');
 		readStream.pipe(res);
 	}	
 });
