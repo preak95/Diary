@@ -51,13 +51,13 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false});
 app.get('/',function(req, res) {
 	console.log('Delivering Homepage'+ req.url);
 	res.writeHead(200,{'content-Type' : 'text/html'});
-	var readStream = fs.createReadStream('pages/homepage.html', 'utf8');
+	var readStream = fs.createReadStream(__dirname + '/pages/homepage.html', 'utf8');
 	readStream.pipe(res);
 });
 
 app.get('/register', function(req, res){
 	res.writeHead(200,{'content-Type' : 'text/html'});
-	var readStream = fs.createReadStream('pages/userregister.html', 'utf8');
+	var readStream = fs.createReadStream(__dirname +'pages/userregister.html', 'utf8');
 	readStream.pipe(res);
 });
 
@@ -68,7 +68,7 @@ app.post('/register', function(req, res){
 			var newClass = user_doc(req.body).save(function(err){
 				if(err) throw err;
 				res.writeHead(200,{'content-Type' : 'text/html'});
-				var readStream = fs.createReadStream('pages/homepage.html', 'utf8');
+				var readStream = fs.createReadStream(__dirname +'pages/homepage.html', 'utf8');
 				readStream.pipe(res);
 			});	
 		}
@@ -83,12 +83,12 @@ app.get('/login', function(req, res){
 	if(req.session.user){
 		console.log("Already logged in");
 		res.writeHead(200,{'content-Type' : 'text/html'});
-		var readStream = fs.createReadStream('pages/bootdiary.html', 'utf8');
+		var readStream = fs.createReadStream(__dirname +'pages/bootdiary.html', 'utf8');
 		readStream.pipe(res);
 	}
 	else{
 		res.writeHead(200, {'content-Type' : 'text/html'});
-		var readStream = fs.createReadStream('pages/loginpage.html', 'utf8');
+		var readStream = fs.createReadStream(__dirname +'pages/loginpage.html', 'utf8');
 		readStream.pipe(res);
 	}	
 });
@@ -104,7 +104,7 @@ app.post('/login', function(req, res){
 				//	console.log(data);
 				req.session.user = req.body;
 				res.writeHead(200,{'content-Type' : 'text/html'});
-				var readStream = fs.createReadStream('pages/bootdiary.html', 'utf8');
+				var readStream = fs.createReadStream(__dirname +'pages/bootdiary.html', 'utf8');
 				readStream.pipe(res);
 			}
 			else
@@ -120,7 +120,7 @@ app.post('/login', function(req, res){
 app.post('/logout',function(req, res){
 	req.session.destroy();
 	res.writeHead(200, {'content-Type' : 'text/html'});
-	var readStream = fs.createReadStream('pages/homepage.html', 'utf8');
+	var readStream = fs.createReadStream(__dirname +'pages/homepage.html', 'utf8');
 	readStream.pipe(res);
 });
 
@@ -147,14 +147,14 @@ app.post('/save', function(req, res){
 
 			user_doc.update({ 'user_name' : user }, { $push : { diaries : {fullDate : uniqueDiaryName}}}, function(err, data){
 				res.writeHead(200,{'content-Type' : 'text/html'});
-				var readStream = fs.createReadStream('pages/bootdiary.html', 'utf8');
+				var readStream = fs.createReadStream(__dirname +'pages/bootdiary.html', 'utf8');
 				readStream.pipe(res);
 		});
 	});	
 	}
 	else{
 		res.writeHead(200, {'content-Type' : 'text/html'});
-		var readStream = fs.createReadStream('pages/loginpage.html', 'utf8');
+		var readStream = fs.createReadStream(__dirname +'pages/loginpage.html', 'utf8');
 		readStream.pipe(res);
 	}	
 });
