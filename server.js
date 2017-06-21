@@ -173,6 +173,10 @@ app.post('/viewall', function(req, res){
 	});
 });
 
+app.get('/cool', function(request, response) {
+  response.send(cool());
+});
+
 app.listen(process.env.PORT || 5000, function(err){
 	if(err) throw err;
 	console.log("I'm listening");
