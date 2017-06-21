@@ -41,10 +41,10 @@ var diaries = new mongoose.Schema({
 var user_doc = mongoose.model('users', users);
 var diary_doc = mongoose.model('diaries', diaries);
 
-app.use(express.static('Styles'));
-app.use('/register', express.static('Styles'));
-app.use('/', express.static('images'));
-app.use('/register', express.static('images'));
+app.use(express.static(__dirname + 'Styles'));
+app.use('/register', express.static(__dirname + 'Styles'));
+app.use('/', express.static(__dirname + 'images'));
+app.use('/register', express.static(__dirname + 'images'));
 app.use(session({secret: "d3h5j3g5h6k6l32lljj", resave: false, saveUninitialized:true}));
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
