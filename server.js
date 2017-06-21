@@ -57,7 +57,7 @@ app.get('/',function(req, res) {
 
 app.get('/register', function(req, res){
 	res.writeHead(200,{'content-Type' : 'text/html'});
-	var readStream = fs.createReadStream(__dirname +'/pages/userregister.html', 'utf8');
+	var readStream = fs.createReadStream(__dirname +'/Pages/userregister.html', 'utf8');
 	readStream.pipe(res);
 });
 
