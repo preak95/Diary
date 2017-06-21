@@ -43,8 +43,8 @@ var diary_doc = mongoose.model('diaries', diaries);
 
 app.use(express.static(__dirname + '/Styles'));
 app.use('/register', express.static(__dirname + '/Styles'));
-app.use('/', express.static(__dirname + '/images'));
-app.use('/register', express.static(__dirname + '/images'));
+app.use('/', express.static(__dirname + '/Images'));
+app.use('/register', express.static(__dirname + '/Images'));
 app.use(session({secret: "d3h5j3g5h6k6l32lljj", resave: false, saveUninitialized:true}));
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
