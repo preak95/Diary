@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var app = express();
 var session = require('express-session');
+var cool = require('cool-ascii-faces');
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -172,7 +173,7 @@ app.post('/viewall', function(req, res){
 	});
 });
 
-app.listen(3000, function(err){
+app.listen(process.env.PORT || 5000, function(err){
 	if(err) throw err;
 	console.log("I'm listening");
 });
