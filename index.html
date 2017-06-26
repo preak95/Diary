@@ -10,43 +10,19 @@
 			font-family: Copperplate / Copperplate Gothic Light, sans-serif;		
 			color: white;
 		}
-		.signup {
-			
-			background-size: 800px 600px;
-			height: 700px;
-			width: 50%;
-			float: left;
-		}
-		.login {
-			margin-left: 50%;
-			position: absolute;
-			background-size: 800px 600px;
-			height: 700px;
-			width: 55%;
-		}
-		a {
-			border: 1px solid white;
-			font-family: "Times New Roman", Times, serif;
-			padding: 10px;
-			text-align: center;
-			font-size: 40px;
-			color: white;
-			text-decoration : none !important;
+		a:link, a:visited {
 			height: 60px;
-			width: 170px;
+			display: block;
+			width: 250px;
+			padding: 10px 30px;
+			text-align: center;
+			color: white;
+			font-size: 30px;
+			text-decoration: none !important;
+			border: 2px solid white;
+			margin: auto;
 		}
 
-		a:hover {
-			height: 80px;
-			width: 180px;
-		}
-		#ps{
-			position: absolute;
-			margin-left: 450px;
-			margin-top: 300px;
-			font-size: 35px;
-			color: white;
-		}
 	</style>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Latest compiled and minified CSS -->
@@ -57,31 +33,18 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
 </head>
 <body>
 
-<div class="container-fluid">
-	<div class="col-sm-2"></div>
-	<div class="col-sm-4">
-		<a href="/register">Sign Up</a>
+<div class="container-fluid" style="margin-top: 100px; text-align: center;">
+	<div class="col-md-4"></div>
+	<div class="col-md-4" style="margin: auto;">
+		<label style="text-align: center; font-size: 40px; color: white; opacity: 1">Welcome</label>
+		<br><br>
+		<a href="/login">Log in</a>
+		<a href="/register" style="margin-top: 20px">Sign Up</a>
 	</div>
-	<div class="col-sm-4">
-		<a href="/login">Sign In</a>
-	</div>
-	<div class="col-sm-2"></div>
+	<div class="col-md-4"></div>
 </div>
-<!--
-<div class="signup">
-	<a href="/register" style="margin-top: 200px; margin-left: 380px; position: absolute;">Sign Up</a>
-</div>
-<div class="login">
-	<a href="/login" style="margin-top: 200px; margin-left: 80px; position: absolute;">Sign In</a>
-</div>
-
-<div id="ps">
-	<p><q><em>Join to not join a queue</em></q></p>
-</div> -->
 </body>
 </html>
