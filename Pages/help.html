@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Help</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		body {
+			background-color: #7CB9E8;
+		}
+	</style>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+
+		<form id="lout" method="POST" action="/logout">
+			<input type="hidden" name="name">
+		</form>
+
+		<form id="viewall" method="POST" action="/viewall">
+			<input type="hidden" name="name">
+		</form>
+
+		<form id="new" method="GET" action="/login">
+			<input type="hidden" name="name">
+		</form>
+
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+		    	</button>
+				<a href="#" class="navbar-brand">JUSTWRITE</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a onclick="document.getElementById('new').submit()">New</a></li>
+					<li><a onclick="document.getElementById('viewall').submit()">View all</a></li>
+					<li><a>Category</a></li>
+					<li class="active"><a>Help</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" onclick="document.getElementById('lout').submit()">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+</nav>
+<div class="container-fluid">
+	<div class="col-md-4"></div>
+	<div class="col-md-4" style="text-align: center; margin-top: 50px;">
+		<div style="margin: auto; font-size: 25px; border: 2px solid; padding: 10px">
+			<p>Something to share?</p>
+			<p><%= %></p>
+			<p style="margin: auto; font-size: 25px;">Hugs and bugs are welcome.</p>
+		</div>
+		
+		<br>
+		<p style="margin: auto;">ps109149@gmail.com</p>
+	</div>
+	<div class="col-md-4"></div>
+</div>
+</body>
+</html>

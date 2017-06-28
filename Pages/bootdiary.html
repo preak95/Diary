@@ -49,6 +49,10 @@
 			<input type="hidden" name="name">
 		</form>
 
+		<form id="help" method="POST" action="/help">
+			<input type="hidden" name="name">
+		</form>
+
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -64,7 +68,7 @@
 					<li class="active"><a onclick="document.getElementById('new').submit()">New</a></li>
 					<li><a onclick="document.getElementById('viewall').submit()">View all</a></li>
 					<li><a>Category</a></li>
-					<li><a>Help</a></li>
+					<li><a onclick="document.getElementById('help').submit()">Help</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#" onclick="document.getElementById('lout').submit()">Logout</a></li>

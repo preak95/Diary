@@ -159,10 +159,6 @@ app.post('/save', function(req, res){
 	}	
 });
 
-function callThemAll(dia){
-	console.log("happpened!");
-	res.render('viewall', {dia : dia});
-}
 
 app.post('/viewall', function(req, res){
 	var user = req.session.user.user_name;
@@ -175,6 +171,14 @@ app.post('/viewall', function(req, res){
 
 app.get('/cool', function(request, response) {
   response.send(cool());
+});
+
+app.post('/help', function(req, res){
+	var user = req.session.user.user_name;
+	user_doc.find({ 'user_name' : user }, function(err1, data){
+		if(err1) throw err1;
+		res.render('help', {Name : data});
+	});
 });
 
 app.listen(process.env.PORT || 5000, function(err){
