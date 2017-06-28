@@ -144,12 +144,12 @@ app.post('/save', function(req, res){
 		diary_one.uName = user;
 		var newClass = diary_doc(diary_one).save(function(err){
 			if(err) throw err;
-
-			user_doc.update({ 'user_name' : user }, { $push : { diaries : {fullDate : uniqueDiaryName}}}, function(err, data){
-				res.writeHead(200,{'content-Type' : 'text/html'});
+			res.writeHead(200,{'content-Type' : 'text/html'});
 				var readStream = fs.createReadStream(__dirname +'/Pages/bootdiary.html', 'utf8');
 				readStream.pipe(res);
-		});
+			//user_doc.update({ 'user_name' : user }, { $push : { diaries : {fullDate : uniqueDiaryName}}}, function(err, data){
+				
+		//});
 	});	
 	}
 	else{
@@ -175,9 +175,22 @@ app.get('/cool', function(request, response) {
 
 app.post('/help', function(req, res){
 	var user = req.session.user.user_name;
-	user_doc.find({ 'user_name' : user }, function(err1, data){
-		if(err1) throw err1;
-		res.render('help', {Name : data});
+	if(user === 'preak95'){
+		res.render('help', {Name : 'This is your website bro!'});
+	}
+	else{
+		user_doc.find({ 'user_name' : user }, function(err1, data){
+			if(err1) throw err1;
+			var name = data[0].name;
+			res.render('help', {Name : name});
+		});
+	}
+});
+
+app.post('/delete', function(req, res){
+	var dName = req.dName;
+	diary_doc.delete({}, function(err, data){
+
 	});
 });
 
